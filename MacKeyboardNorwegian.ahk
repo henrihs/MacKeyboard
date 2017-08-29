@@ -26,20 +26,19 @@ SendMode Input
 
 ;By demand of Visual Studio developers, All F-keys are now left as default. Comment out for media keys.
 
-;RAlt & F7::SendInput {Media_Prev}
-;RAlt & F8::SendInput {Media_Play_Pause}
-;RAlt & F9::SendInput {Media_Next}
-;F10::SendInput {Volume_Mute}
-;F11::SendInput {Volume_Down}
-;F12::SendInput {Volume_Up}
+RAlt & F7::SendInput {Media_Prev}
+RAlt & F8::SendInput {Media_Play_Pause}
+RAlt & F9::SendInput {Media_Next}
+RAlt & F10::SendInput {Volume_Mute}
+RAlt & F11::SendInput {Volume_Down}
+RAlt & F12::SendInput {Volume_Up}
 
 ; swap left command/windows key with left alt
 ;LWin::LAlt
 ;LAlt::LWin ; add a semicolon in front of this line if you want to disable the windows key
 
-
 ; Eject Key
-F20::SendInput {Insert}
+F13::SendInput {Insert}
 
 ; Alt + Insert (New File in ReSharper)
 ;LAlt & Insert::SendInput {LCtrl Down}{LAlt Down}{Insert}
@@ -47,11 +46,10 @@ F20::SendInput {Insert}
 ; Alt + Insert (Generate Code ReSharper)
 LAlt & F13::SendInput {LAlt Down}{Insert}
 
-
-; F13-15, standard windows mapping
-F13::SendInput {PrintScreen}
-F14::SendInput {ScrollLock}
-; F15::SendInput {Pause}
+; F14-15
+F14::SendInput {PrintScreen}
+;F14::SendInput {ScrollLock}
+F15::SendInput {Pause}
 
 ; Delete files
 RWin & BS::SendInput {Delete}
@@ -121,10 +119,10 @@ Lwin & Tab::AltTab
 ; --------------------------------------------------------------
 
 ; Map @ correctly
-'::@
+;'::@
 
 ; Map ' correctly
-|::'
+;|::'
 
 ;Mapping * correctly
 Shift & '::SendInput {NumpadMult}
@@ -228,7 +226,6 @@ Shift & '::SendInput {NumpadMult}
 ;#l::SendInput ^{l}
 
 ; Visual Studio
-; Mouse button 4/5 Navigate forward/backward
+; Mouse button 4/5 Navigate forward/backward in Visual studio
 #IfWinActive ahk_exe devenv.exe
 #XButton1::SendInput, {Ctrl Down}{-}{Ctrl Up}
-
