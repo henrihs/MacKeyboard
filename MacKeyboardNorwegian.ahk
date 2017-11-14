@@ -196,6 +196,9 @@ Shift & '::SendInput {NumpadMult}
 ;Lwin & Left::SendInput {Home}
 ;Lwin & Right::SendInput {End}
 
+;Use scroll wheel tilt for page up/down
+WheelRight::Send {PgDn}
+WheelLeft::Send {PgUp}
 
 ; --------------------------------------------------------------
 ; Application specific
@@ -228,4 +231,5 @@ Shift & '::SendInput {NumpadMult}
 ; Visual Studio
 ; Mouse button 4/5 Navigate forward/backward in Visual studio
 #IfWinActive ahk_exe devenv.exe
-#XButton1::SendInput, {Ctrl Down}{-}{Ctrl Up}
+XButton1::SendInput, {Ctrl Down}{-}{Ctrl Up}
+XButton2::SendInput, {Ctrl Down}{Shift down}{-}{Ctrl Up}{Shift Up}
