@@ -163,9 +163,6 @@ Shift & '::SendInput {NumpadMult}
 ; Map Alt + - to ±
 !+::SendInput {±}
 
-; Map Alt + R to ®
-!r::SendInput {®}
-
 ; Map Alt + 7 to |
 !7::SendInput {|}
 <^>!7::SendInput {|}
@@ -233,3 +230,8 @@ WheelLeft::Send {PgUp}
 #IfWinActive ahk_exe devenv.exe
 XButton1::SendInput, {Ctrl Down}{-}{Ctrl Up}
 XButton2::SendInput, {Ctrl Down}{Shift down}{-}{Ctrl Up}{Shift Up}
+
+; wsl-terminal
+#IfWinActive ahk_exe mintty.exe
+^F13::SendInput {Ctrl Down}{Insert}{Ctrl Up}
+^+F13::SendInput {Ctrl Down}{Shift Down}{Insert}{Shift Up}{Ctrl Up}
